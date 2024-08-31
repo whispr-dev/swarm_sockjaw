@@ -1,0 +1,63 @@
+Step-by-Step Instructions
+
+1. Setup Your Environment
+Install Python:
+
+- Ensure Python 3.x is installed. You can download it from python.org.
+Install Required Packages:
+- Open a terminal (Command Prompt, PowerShell, or any terminal of your choice).
+- Install the required packages using `pip`:
+`pip install numpy torch`
+
+
+Ensure CUDA Compatibility:
+
+
+If you have an NVIDIA GPU, ensure CUDA is installed and compatible with your PyTorch installation. If not, PyTorch will fall back to using the CPU.
+
+2. Save the Script
+Create a Python File:
+- Open your favorite text editor or IDE (like VS Code).
+- Copy and paste the provided script into a new file.
+- Save the file as xxxx.py
+
+3. Running the Script
+Run the Script:
+- Open a terminal and navigate to the directory where jellyfish_ai.py is saved.
+- Run the script using Python:
+`python xxxx.py`
+
+4. Script Execution and Interaction
+a) Initial Execution:
+- The script will start executing and will print out the progress of the training process. This includes the current epoch and the value of epsilon (exploration rate).
+b) Monitoring Progress:
+- You will see output similar to:
+
+`Epoch 1/100, Epsilon: 0.9500000000000001
+Epoch 2/100, Epsilon: 0.902
+...`
+
+- This indicates the current epoch and the decreasing epsilon value, which controls the exploration-exploitation trade-off.
+
+c) Training and Evaluation:
+- The script will iterate over the number of parameter combinations (num_combinations).
+- For each combination, it will train the DQN agent using the sampled epsilon parameters.
+- After training, it will evaluate the agent's performance and print the best parameters and performance at the end.
+
+5. Evaluating Results
+a)Understanding the Output:
+- At the end of the script, you will see output similar to:
+
+`Best Parameters: (0.843345, 0.043435, 0.978321)
+Best Performance: 9.5`
+
+- This indicates the best set of parameters (epsilon_start, epsilon_end, epsilon_decay) and the corresponding performance metric (average total reward).
+
+b) Adjusting Parameters:
+ If you want to try different ranges for `epsilon_start`, `epsilon_end`, or `epsilon_decay`, you can modify these ranges in the script:
+
+`epsilon_start_range = (0.3, 0.8)
+epsilon_end_range = (0.01, 0.05)
+epsilon_decay_range = (0.90, 0.99)`
+
+Rerun the script to see if different ranges yield better performance.
