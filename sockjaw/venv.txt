@@ -1,0 +1,36 @@
+- Create a Virtual Environment:
+(mine is called `the sea`)
+
+`python -m venv thesea`
+
+
+- to Activate the Virtual Environment:
+
+`thesea\Scripts\activate`
+
+
+- to Deactivate the Virtual Environment:
+
+`deactivate`
+
+
+- Installing Packages:
+
+`pip install package_name`
+
+- Listing Installed Packages:
+
+`pip list`
+
+- Freezing Requirements:
+To create a requirements.txt file listing all the packages and their versions, use:
+
+`pip freeze > requirements.txt`
+
+- Installing from `requirements.txt`:
+To install the packages listed in a `requirements.txt` file, use:
+
+`pip install -r requirements.txt`
+
+
+

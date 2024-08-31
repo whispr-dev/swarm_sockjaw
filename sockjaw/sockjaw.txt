@@ -1,0 +1,364 @@
+import requests
+from bs4 import BeautifulSoup
+import random
+
+class InternetJellyfish:
+    def __init__(self):
+        self.position = "https://www.example.com"  # Starting position
+        self.data = []
+
+    def navigate(self):
+        # Simulate movement by following a random link on the current page
+        response = requests.get(self.position)
+        soup = BeautifulSoup(response.text, 'html.parser')
+        links = soup.find_all('a')
+        if links:
+            next_link = random.choice(links)['href']
+            self.position = next_link
+        else:
+            print("No links found on this page. Moving randomly.")
+            self.position = "https://www.example.com"  # Move to a default page
+
+    def sense(self):
+        # Simulate sensing by scraping data from the current page
+        response = requests.get(self.position)
+        self.data.append(response.text)
+
+    def decide(self):
+        # Simulate decision making by randomly choosing actions
+        actions = ["navigate", "sense"]
+        action = random.choice(actions)
+        if action == "navigate":
+            self.navigate()
+        elif action == "sense":
+            self.sense()
+
+import subprocess
+
+# Function to run the PHP script and capture its output
+def run_php_script():
+    php_script = "path/to/your/php/script.php"  # Update with the actual path
+    process = subprocess.Popen(["php", php_script], stdout=subprocess.PIPE)
+    output, _ = process.communicate()
+    return output.decode("utf-8")
+
+# Function to parse the PHP output and extract relevant information
+def parse_php_output(php_output):
+    # Parse the PHP output here and extract the desired information
+    # You may need to use regular expressions or specific parsing logic
+    # Return the extracted information in a suitable format
+
+# Main function to simulate the behavior of the jellyfish
+def simulate_jellyfish_behavior():
+    # Simulate web scraping like a jellyfish "senses"
+    webpage_content = run_php_script()
+
+    # Parse the webpage content to extract relevant information
+    extracted_info = parse_php_output(webpage_content)
+
+    # Further processing or actions based on the extracted information
+    # ...
+
+if __name__ == "__main__":
+    simulate_jellyfish_behavior()
+
+
+if __name__ == "__main__":
+    jellyfish = InternetJellyfish()
+    for _ in range(10):
+        jellyfish.decide()
+        print("Current Position:", jellyfish.position)
+        print("Data Collected:", jellyfish.data[-1][:100])  # Print first 100 characters of the latest data
+        print("---")
+
+
+
+
+
+
+
+###
+
+<h3>Unanonymity 0.2</h3>
+    <b>Tool name</b>   : Unanonymity<br>
+    <b>Description</b> : Unanonymity is a PHP script that collects all user data on the web server <br>
+side and also on the web client side to show what information the server owner can see <br>
+from the user if they want.<br>
+    <br>
+    <b>Version</b>     : 0.2<br>
+    <b>OS</b>          : Firefox 3.0.7 on Windows XP<br>
+    <b>Todo</b>        : Javascript portscanner<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Server side information</h3>
+    <br>
+    <?
+
+      /*
+       * Servier side information gathering
+       *
+       */
+
+      $gRemoteAddr = $_SERVER['HTTP_X_FORWARDED_FOR']?$_SERVER['HTTP_X_FORWARDED_FOR']:$_SERVER['REMOTE_ADDR'];
+      $gRemoteHostname = gethostbyaddr($gRemoteAddr);
+      $gRemotePort = $_SERVER['REMOTE_PORT'];
+      $gUserAgent = $_SERVER['HTTP_USER_AGENT'];
+      $gRefererPage = $_SERVER['HTTP_REFERER'];
+      $gHTTPAccept = $_SERVER['HTTP_ACCEPT'];
+      $gHTTPAcceptLanguage = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
+      $gHTTPAcceptEncoding = $_SERVER['HTTP_ACCEPT_ENCODING'];
+      $gHTTPAcceptCharset = $_SERVER['HTTP_ACCEPT_CHARSET'];
+      $gProxyXForwarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+      $gProxyForwarded = $_SERVER['HTTP_FORWARDED'];
+      $gProxyClientIP = $_SERVER['HTTP_CLIENT_IP'];
+      $gProxyVia = $_SERVER['HTTP_VIA'];
+      $gProxyConnection = $_SERVER['HTTP_PROXY_CONNECTION'];
+    ?>
+    <p id="coloured1">
+    <?
+      echo "<b>Your IP address</b> : $gRemoteAddr<br>\n";
+      echo "<b>Your hostname</b> : $gRemoteHostname<br>\n";
+      echo "<b>Your source port</b> : $gRemotePort<br>\n";
+    ?&gt;</p>
+      <br>
+      <p id="coloured1">
+    <?
+      echo "<b>Your user agent</b> : $gUserAgent<br>\n";
+      echo "<b>Referer page</b> : $gRefererPage<br>\n";
+      echo "<b>HTTP Accept</b> : $gHTTPAccept<br>\n";
+      echo "<b>HTTP Accept language</b> : $gHTTPAcceptLanguage<br>\n";
+      echo "<b>HTTP Accept encoding</b> : $gHTTPAcceptEncoding<br>\n";
+      echo "<b>HTTP Accept charset</b> : $gHTTPAcceptCharset<br>\n";
+    ?&gt;</p>
+      <br>
+      <p id="coloured1">
+    <?
+      echo "<b>Proxy XFORWARDED</b> : $gProxyXForwarded<br>\n";
+      echo "<b>Proxy Forwarded</b> : $gProxyForwarded<br>\n";
+      echo "<b>Proxy client IP</b> : $ggProxyClientIP<br>\n";
+      echo "<b>Proxy via</b> : $gProxyVia<br>\n";
+      echo "<b>Proxy Proxy connection</b> : $gProxyConnection<br>\n";
+    ?&gt;
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <h3>Hardware information</h3>
+    <p id="coloured1">
+      <script>
+        document.write("<b>Browser name</b> : ", navigator.appName, "<br>\n");
+        document.write("<b>Browser version</b> : ", navigator.appCodeName, "<br>\n");
+        document.write("<b>Platform</b> : ", navigator.platform, "<br>\n");
+        document.write("<b>History entries</b> : ", history.length, "<br>\n");
+        document.write("<b>Screen size</b> : ", screen.width," x ",screen.height, " x ", screen.colorDepth, " bpp (available for browser: ", window.screen.availWidth, " x ", window.screen.availHeight, ")<br>\n");
+      </script>
+    </p>
+    <br>
+    <br>
+    <h3>Networking information</h3>
+    <p id="coloured1">
+      <script>
+        if (navigator.javaEnabled())
+        {
+          addr = java.net.InetAddress.getLocalHost();
+          host = addr.getHostName();
+          ip = addr.getHostAddress();
+          document.write("<b>Localhost address</b> : ", ip, " (hostname: ", host, ")<br>\n");
+        }
+
+        if (navigator.javaEnabled())
+        {
+          host = window.location.host;
+          port = window.location.port || 80;
+          sock = new java.net.Socket();
+          sock.bind(new java.net.InetSocketAddress('0.0.0.0', 0));
+          sock.connect(new java.net.InetSocketAddress(host, (!port)?80:port));
+          addr = sock.getLocalAddress();
+          host = addr.getHostName();
+          ip = addr.getHostAddress();
+          document.write("<b>Local NIC address</b> : ", ip, " (hostname: ", host, ")<br>\n");
+        }
+      </script>
+    </p>
+    <br>
+    <br>
+    <h3>Installed plugins</h3>
+    <p id="coloured1">
+      <script>
+        if (navigator.plugins.length)
+        {
+          for (i = 0; i < navigator.plugins.length; i++)
+          {
+            plugin = navigator.plugins[i];
+            document.write(plugin.name, " (", plugin.filename, ")<br>\n");
+          }
+        }
+      </script>
+    </p>
+    <br>
+    <br>
+    <br>
+    <h3>Browser history</h3>
+    <p id="coloured1">
+      <script type="text/javascript">
+        var websites = [
+          "https://web.archive.org/web/20090702132350/http://ajaxian.com/",
+          "https://web.archive.org/web/20090702132350/http://digg.com/",
+          "https://web.archive.org/web/20090702132350/http://en.wikipedia.org/",
+          "https://web.archive.org/web/20090702132350/http://english.aljazeera.net/HomePage",
+          "https://web.archive.org/web/20090702132350/http://de.wikipedia.org/",
+          "https://web.archive.org/web/20090702132350/http://login.yahoo.com/",
+          "https://web.archive.org/web/20090702132350/http://mail.google.com/",
+          "https://web.archive.org/web/20090702132350/http://mail.yahoo.com/",
+          "https://web.archive.org/web/20090702132350/http://my.yahoo.com/",
+          "https://web.archive.org/web/20090702132350/http://reddit.com/",
+          "https://web.archive.org/web/20090702132350/http://seoblackhat.com",
+          "https://web.archive.org/web/20090702132350/http://slashdot.org/",
+          "https://web.archive.org/web/20090702132350/http://techfoolery.com/",
+          "https://web.archive.org/web/20090702132350/http://weblogs.asp.net/jezell/",
+          "https://web.archive.org/web/20090702132350/http://www.amazon.com/",
+          "https://web.archive.org/web/20090702132350/http://www.aol.com/",
+          "https://web.archive.org/web/20090702132350/http://www.apple.com/",
+          "https://web.archive.org/web/20090702132350/http://www.ask.com/",
+          "https://web.archive.org/web/20090702132350/http://www.bankofamerica.com/",
+          "https://web.archive.org/web/20090702132350/http://www.bankone.com/",
+          "https://web.archive.org/web/20090702132350/http://www.bing.com/",
+          "https://web.archive.org/web/20090702132350/http://www.blackhat.com/",
+          "https://web.archive.org/web/20090702132350/http://www.blogger.com/",
+          "https://web.archive.org/web/20090702132350/http://www.bloglines.com/",
+          "https://web.archive.org/web/20090702132350/http://www.bofa.com/",
+          "https://web.archive.org/web/20090702132350/http://www.capitalone.com/",
+          "https://web.archive.org/web/20090702132350/http://www.cenzic.com",
+          "https://web.archive.org/web/20090702132350/http://www.cgisecurity.com",
+          "https://web.archive.org/web/20090702132350/http://www.chase.com/",
+          "https://web.archive.org/web/20090702132350/http://www.citibank.com/",
+          "https://web.archive.org/web/20090702132350/http://www.comerica.com/",
+          "https://web.archive.org/web/20090702132350/http://www.craiglist.org/",
+          "https://web.archive.org/web/20090702132350/http://www.e-gold.com/",
+          "https://web.archive.org/web/20090702132350/http://www.ebay.com/",
+          "https://web.archive.org/web/20090702132350/http://www.etrade.com/",
+          "https://web.archive.org/web/20090702132350/http://www.expedia.com/",
+          "https://web.archive.org/web/20090702132350/http://www.flickr.com/",
+          "https://web.archive.org/web/20090702132350/http://www.go.com/",
+          "https://web.archive.org/web/20090702132350/http://www.google.ca/",
+          "https://web.archive.org/web/20090702132350/http://www.google.com/",
+          "https://web.archive.org/web/20090702132350/http://www.google.com.br/",
+          "https://web.archive.org/web/20090702132350/http://www.google.ch/",
+          "https://web.archive.org/web/20090702132350/http://www.google.cn/",
+          "https://web.archive.org/web/20090702132350/http://www.google.co.jp/",
+          "https://web.archive.org/web/20090702132350/http://www.google.de/",
+          "https://web.archive.org/web/20090702132350/http://www.google.es/",
+          "https://web.archive.org/web/20090702132350/http://www.google.fr/",
+          "https://web.archive.org/web/20090702132350/http://www.hattrick.org/",
+          "https://web.archive.org/web/20090702132350/http://www.hsbc.com/",
+          "https://web.archive.org/web/20090702132350/http://www.hi5.com/",
+          "https://web.archive.org/web/20090702132350/http://www.icq.com/",
+          "https://web.archive.org/web/20090702132350/http://www.imdb.com/",
+          "https://web.archive.org/web/20090702132350/http://www.imageshack.us/",
+          "https://web.archive.org/web/20090702132350/http://www.jailbabes.com",
+          "https://web.archive.org/web/20090702132350/http://www.linkedin.com/",
+          "https://web.archive.org/web/20090702132350/http://www.tagged.com/",
+          "https://web.archive.org/web/20090702132350/http://www.globo.com/",
+          "https://web.archive.org/web/20090702132350/http://www.megavideo.com/",
+          "https://web.archive.org/web/20090702132350/http://www.kino.to/",
+          "https://web.archive.org/web/20090702132350/http://www.google.ru/",
+          "https://web.archive.org/web/20090702132350/http://www.friendster.com/",
+          "https://web.archive.org/web/20090702132350/http://www.nytimes.com/",
+          "https://web.archive.org/web/20090702132350/http://www.megaclick.com/",
+          "https://web.archive.org/web/20090702132350/http://www.mininova.org/",
+          "https://web.archive.org/web/20090702132350/http://www.thepiratebay.org/",
+          "https://web.archive.org/web/20090702132350/http://www.netlog.com/",
+          "https://web.archive.org/web/20090702132350/http://www.orkut.com/",
+          "https://web.archive.org/web/20090702132350/http://www.megacafe.com/",
+          "https://web.archive.org/web/20090702132350/http://www.answers.com/",
+          "https://web.archive.org/web/20090702132350/http://www.scribd.com/",
+          "https://web.archive.org/web/20090702132350/http://www.xing.com/",
+          "https://web.archive.org/web/20090702132350/http://www.partypoker.com/",
+          "https://web.archive.org/web/20090702132350/http://www.skype.com/",
+          "https://web.archive.org/web/20090702132350/http://mail.google.com/",
+          "https://web.archive.org/web/20090702132350/http://www.microsoft.com/",
+          "https://web.archive.org/web/20090702132350/http://www.msn.com/",
+          "https://web.archive.org/web/20090702132350/http://www.myspace.com/",
+          "https://web.archive.org/web/20090702132350/http://www.ntobjectives.com",
+          "https://web.archive.org/web/20090702132350/http://www.passport.net/",
+          "https://web.archive.org/web/20090702132350/http://www.paypal.com/",
+          "https://web.archive.org/web/20090702132350/http://www.photobucket.com/",
+          "https://web.archive.org/web/20090702132350/http://www.pornhub.com/",
+          "https://web.archive.org/web/20090702132350/http://www.reddit.com/",
+          "https://web.archive.org/web/20090702132350/http://www.redtube.com/",
+          "https://web.archive.org/web/20090702132350/http://www.sourceforge.net/",
+          "https://web.archive.org/web/20090702132350/http://www.spidynamics.com",
+          "https://web.archive.org/web/20090702132350/http://www.statefarm.com/",
+          "https://web.archive.org/web/20090702132350/http://www.twitter.com/",
+          "https://web.archive.org/web/20090702132350/http://www.usbank.com/",
+          "https://web.archive.org/web/20090702132350/http://www.vkontakte.ru/",
+          "https://web.archive.org/web/20090702132350/http://www.wachovia.com/",
+          "https://web.archive.org/web/20090702132350/http://www.wamu.com/",
+          "https://web.archive.org/web/20090702132350/http://www.watchfire.com",
+          "https://web.archive.org/web/20090702132350/http://www.webappsec.org",
+          "https://web.archive.org/web/20090702132350/http://www.wellsfargo.com/",
+          "https://web.archive.org/web/20090702132350/http://www.whitehatsec.com",
+          "https://web.archive.org/web/20090702132350/http://www.wordpress.com/",
+          "https://web.archive.org/web/20090702132350/http://www.xanga.com/",
+          "https://web.archive.org/web/20090702132350/http://www.yahoo.com/",
+          "https://web.archive.org/web/20090702132350/http://seoblackhat.com/",
+          "https://web.archive.org/web/20090702132350/http://www.alexa.com/",
+          "https://web.archive.org/web/20090702132350/http://www.youtube.com/",
+          "https://web.archive.org/web/20090702132350/https://banking.wellsfargo.com/",
+          "https://web.archive.org/web/20090702132350/https://commerce.blackhat.com/",
+          "https://web.archive.org/web/20090702132350/https://online.wellsfargo.com/",
+        ];
+
+        function revealHistory()
+        {
+          var color = "";
+          var link = "";
+          var counter = 0;
+
+
+          for (counter = 0; counter < websites.length; counter++)
+          {
+            link = document.createElement("a");
+            link.id = "id" + counter;
+            link.href = websites[counter];
+            link.innerHTML = websites[counter];
+            document.body.appendChild(link);
+            color = document.defaultView.getComputedStyle(link,null).getPropertyValue("color");
+            document.body.removeChild(link);
+
+            if (color == "rgb(0, 0, 255)")
+              document.write(websites[counter], "<br>\n");
+
+
+          } // end visited website loop
+        } // end stealHistory method
+
+
+        revealHistory();
+      </script>
+    </p>
+  </body>
+</html>
+<!--
+     FILE ARCHIVED ON 13:23:50 Jul 02, 2009 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 02:21:23 Jan 20, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 139.002 (11)
+  exclusion.robots: 0.185
+  exclusion.robots.policy: 0.174
+  cdx.remote: 0.063
+  esindex: 0.009
+  LoadShardBlock: 75.67 (3)
+  PetaboxLoader3.datanode: 470.336 (4)
+  load_resource: 434.739
+  PetaboxLoader3.resolve: 23.142
+-->

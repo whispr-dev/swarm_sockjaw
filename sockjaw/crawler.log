@@ -1,0 +1,442 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.sourceforge.net:80
+DEBUG:urllib3.connectionpool:http://www.sourceforge.net:80 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.sourceforge.net:443
+DEBUG:urllib3.connectionpool:https://www.sourceforge.net:443 "GET / HTTP/1.1" 301 178
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): sourceforge.net:443
+DEBUG:urllib3.connectionpool:https://sourceforge.net:443 "GET / HTTP/1.1" 403 None
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.tagged.com:80
+DEBUG:urllib3.connectionpool:http://www.tagged.com:80 "GET / HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): secure.tagged.com:443
+ERROR:root:Error crawling http://www.tagged.com: HTTPSConnectionPool(host='secure.tagged.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1006)')))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.friendster.com:80
+DEBUG:urllib3.connectionpool:http://www.friendster.com:80 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): friendster.com:443
+DEBUG:urllib3.connectionpool:https://friendster.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:Crawling: http://www.friendster.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): app.friendster.com:443
+DEBUG:urllib3.connectionpool:https://app.friendster.com:443 "GET /auth/login HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://app.friendster.com/auth/login
+ERROR:root:Error crawling mailto:help@friendster.com: No connection adapters were found for 'mailto:help@friendster.com'
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.kino.to:80
+ERROR:root:Error crawling http://www.kino.to: HTTPConnectionPool(host='www.kino.to', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000198422FF3D0>: Failed to resolve 'www.kino.to' ([Errno 11002] getaddrinfo failed)"))
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.bankone.com:80
+DEBUG:urllib3.connectionpool:http://www.bankone.com:80 "GET / HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET / HTTP/1.1" 200 17450
+DEBUG:root:Crawling: http://www.bankone.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.co.uk:443
+DEBUG:urllib3.connectionpool:https://www.chase.co.uk:443 "GET /gb/en/?utm_source=jpmc&utm_medium=usbanner&utm_campaign=us_website_banner_redirect_homepage&pid=jpmc&af_channel=usbanner&c=us_website_banner_redirect_homepage HTTP/1.1" 200 45051
+DEBUG:root:Crawling: https://www.chase.co.uk/gb/en/?utm_source=jpmc&utm_medium=usbanner&utm_campaign=us_website_banner_redirect_homepage&pid=jpmc&af_channel=usbanner&c=us_website_banner_redirect_homepage
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): chaseuk.statuspage.io:443
+DEBUG:urllib3.connectionpool:https://chaseuk.statuspage.io:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://chaseuk.statuspage.io/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.youtube.com:443
+DEBUG:urllib3.connectionpool:https://www.youtube.com:443 "GET /channel/UCdzldf9mVBHWtewkFaRf5Bg HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.youtube.com/channel/UCdzldf9mVBHWtewkFaRf5Bg
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.facebook.com:443
+DEBUG:urllib3.connectionpool:https://www.facebook.com:443 "GET /chaseuk HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:https://www.facebook.com:443 "GET /login/?next=https%3A%2F%2Fwww.facebook.com%2Fchaseuk HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.facebook.com/chaseuk
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com:443
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /chase_uk HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /chase_uk/ HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fchase_uk%2F HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.instagram.com/chase_uk
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.twitter.com:443
+DEBUG:urllib3.connectionpool:https://www.twitter.com:443 "GET /chase_uk HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): twitter.com:443
+DEBUG:urllib3.connectionpool:https://twitter.com:443 "GET /chase_uk HTTP/1.1" 400 1001
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.linkedin.com:443
+DEBUG:urllib3.connectionpool:https://www.linkedin.com:443 "GET /company/chase HTTP/1.1" 999 1530
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET / HTTP/1.1" 200 17454
+DEBUG:root:Crawling: https://www.chase.com
+DEBUG:root:Already visited: https://www.chase.co.uk/gb/en/?utm_source=jpmc&utm_medium=usbanner&utm_campaign=us_website_banner_redirect_homepage&pid=jpmc&af_channel=usbanner&c=us_website_banner_redirect_homepage
+DEBUG:root:Already visited: https://www.chase.com
+DEBUG:root:Already visited: https://www.chase.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /digital/resources/search-results.html HTTP/1.1" 200 15834
+DEBUG:root:Crawling: https://www.chase.com/digital/resources/search-results.html
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /meeting-scheduler/getstarted HTTP/1.1" 200 8569
+DEBUG:root:Crawling: https://www.chase.com/meeting-scheduler/getstarted
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /business HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.chase.com/business
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.jpmorgan.com:443
+DEBUG:urllib3.connectionpool:https://www.jpmorgan.com:443 "GET /commercial-banking HTTP/1.1" 200 28436
+DEBUG:root:Crawling: https://www.jpmorgan.com/commercial-banking
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /espanol HTTP/1.1" 200 18277
+DEBUG:root:Crawling: https://www.chase.com/espanol
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): personal.chase.com:443
+DEBUG:urllib3.connectionpool:https://personal.chase.com:443 "GET /personal/checking HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://personal.chase.com/personal/checking
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): personal.chase.com:443
+DEBUG:urllib3.connectionpool:https://personal.chase.com:443 "GET /personal/first-banking HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://personal.chase.com/personal/first-banking
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): personal.chase.com:443
+DEBUG:urllib3.connectionpool:https://personal.chase.com:443 "GET /personal/savings HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://personal.chase.com/personal/savings
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /?jp_ltg=chsecate_featured&CELL=6TKV HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/?jp_ltg=chsecate_featured&CELL=6TKV
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /all-credit-cards?CELL=6TKV HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/all-credit-cards?CELL=6TKV
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /business-credit-cards?jp_ltg=chsecate_smlbiz&CELL=6TKV HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/business-credit-cards?jp_ltg=chsecate_smlbiz&CELL=6TKV
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/offers/secureshopping?CELL=6TKV HTTP/1.1" 200 15177
+DEBUG:root:Crawling: https://www.chase.com/personal/offers/secureshopping?CELL=6TKV
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mortgage/mortgage-purchase HTTP/1.1" 200 17000
+DEBUG:root:Crawling: https://www.chase.com/personal/mortgage/mortgage-purchase
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mortgage/mortgage-refinance HTTP/1.1" 200 16025
+DEBUG:root:Crawling: https://www.chase.com/personal/mortgage/mortgage-refinance
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): secure.chase.com:443
+DEBUG:urllib3.connectionpool:https://secure.chase.com:443 "GET /web/oao/application/retail HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://secure.chase.com/web/oao/application/retail#/origination;cfgCode=502002;AcctRef=Credit/index/index
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mortgage/calculators-resources HTTP/1.1" 200 19808
+DEBUG:root:Crawling: https://www.chase.com/personal/mortgage/calculators-resources
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mortgage/mortgage-rates HTTP/1.1" 200 23313
+DEBUG:root:Crawling: https://www.chase.com/personal/mortgage/mortgage-rates
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mortgage/manage-account HTTP/1.1" 200 13902
+DEBUG:root:Crawling: https://www.chase.com/personal/mortgage/manage-account
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mortgage/education HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.chase.com/personal/mortgage/education
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autofinance.chase.com:443
+DEBUG:urllib3.connectionpool:https://autofinance.chase.com:443 "GET /auto-finance/auto-loans?offercode=WDXDPXXX09 HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX09
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autopreferred.chase.com:443
+DEBUG:urllib3.connectionpool:https://autopreferred.chase.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://autopreferred.chase.com/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autofinance.chase.com:443
+DEBUG:urllib3.connectionpool:https://autofinance.chase.com:443 "GET /auto-finance/manage?offercode=WDXDPXXX06 HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://autofinance.chase.com/auto-finance/manage?offercode=WDXDPXXX06
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /auto/prequalified?offercode=WDXDPXXX11 HTTP/1.1" 200 10511
+DEBUG:root:Crawling: https://www.chase.com/auto/prequalified?offercode=WDXDPXXX11
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autofinance.chase.com:443
+DEBUG:urllib3.connectionpool:https://autofinance.chase.com:443 "GET /auto-finance/home?offercode=WDXDPXXX05 HTTP/1.1" 301 174
+DEBUG:urllib3.connectionpool:https://autofinance.chase.com:443 "GET /?offercode=WDXDPXXX05 HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://autofinance.chase.com/auto-finance/home?offercode=WDXDPXXX05
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/investments HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.chase.com/personal/investments
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/investments/advisor-services HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.chase.com/personal/investments/advisor-services
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/investments/online-investing/self-directed HTTP/1.1" 301 71256
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): account.chase.com:443
+DEBUG:urllib3.connectionpool:https://account.chase.com:443 "GET /investing/self-directedoffer HTTP/1.1" 200 46932
+DEBUG:root:Crawling: https://www.chase.com/personal/investments/online-investing/self-directed
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/investments/wealth-plan HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.chase.com/personal/investments/wealth-plan
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/investments/retirement HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.chase.com/personal/investments/retirement
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/investments/education HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.chase.com/personal/investments/education
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/investments/learning-and-insights HTTP/1.1" 200 16593
+DEBUG:root:Crawling: https://www.chase.com/personal/investments/learning-and-insights
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /digital/customer-service HTTP/1.1" 200 20501
+DEBUG:root:Crawling: https://www.chase.com/digital/customer-service
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mobile-online-banking/make-payment HTTP/1.1" 200 15313
+DEBUG:root:Crawling: https://www.chase.com/personal/mobile-online-banking/make-payment
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): locator.chase.com:443
+DEBUG:urllib3.connectionpool:https://locator.chase.com:443 "GET /?locale=en_US HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://locator.chase.com/?locale=en_US
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET / HTTP/1.1" 200 17461
+DEBUG:root:Crawling: https://www.chase.com/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): secure.chase.com:443
+DEBUG:urllib3.connectionpool:https://secure.chase.com:443 "GET /web/auth/dashboard HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://secure.chase.com/web/auth/dashboard
+DEBUG:root:Already visited: https://secure.chase.com/web/auth/dashboard
+DEBUG:root:Already visited: https://www.chase.com/digital/resources/search-results.html
+DEBUG:root:Already visited: https://www.chase.com/
+DEBUG:root:Already visited: https://www.chase.com/business
+DEBUG:root:Already visited: https://www.jpmorgan.com/commercial-banking
+DEBUG:root:Already visited: https://www.chase.com/meeting-scheduler/getstarted
+DEBUG:root:Already visited: https://www.chase.com/digital/customer-service
+DEBUG:root:Already visited: https://www.chase.com/digital/customer-service
+DEBUG:root:Already visited: https://www.chase.com/personal/mobile-online-banking/make-payment
+DEBUG:root:Already visited: https://locator.chase.com/?locale=en_US
+DEBUG:root:Already visited: https://www.chase.com/espanol
+DEBUG:root:Already visited: https://www.chase.com/digital/resources/search-results.html
+DEBUG:root:Already visited: https://www.chase.com/
+DEBUG:root:Already visited: https://secure.chase.com/web/auth/dashboard
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): account.chase.com:443
+DEBUG:urllib3.connectionpool:https://account.chase.com:443 "GET /personalbanking HTTP/1.1" 301 24763
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): personal.chase.com:443
+DEBUG:urllib3.connectionpool:https://personal.chase.com:443 "GET /personal/checking HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://account.chase.com/personalbanking
+DEBUG:root:Already visited: https://personal.chase.com/personal/checking
+DEBUG:root:Already visited: https://personal.chase.com/personal/first-banking
+DEBUG:root:Already visited: https://account.chase.com/personalbanking
+DEBUG:root:Already visited: https://personal.chase.com/personal/savings
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /credit-cards/home/?CELL=6TKV HTTP/1.1" 301 163
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /?CELL=6TKV HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/credit-cards/home/?CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/?jp_ltg=chsecate_featured&CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/all-credit-cards?CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/business-credit-cards?jp_ltg=chsecate_smlbiz&CELL=6TKV
+DEBUG:root:Already visited: https://www.chase.com/personal/offers/secureshopping?CELL=6TKV
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.chase.com:443
+DEBUG:urllib3.connectionpool:https://www.chase.com:443 "GET /personal/mortgage HTTP/1.1" 200 20860
+DEBUG:root:Crawling: https://www.chase.com/personal/mortgage
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-purchase
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-refinance
+DEBUG:root:Already visited: https://secure.chase.com/web/oao/application/retail#/origination;cfgCode=502002;AcctRef=Credit/index/index
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/calculators-resources
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-rates
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/manage-account
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/education
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autofinance.chase.com:443
+DEBUG:urllib3.connectionpool:https://autofinance.chase.com:443 "GET /auto-finance/auto-loans?offercode=WDXDPXXX12 HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX12
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX09
+DEBUG:root:Already visited: https://autopreferred.chase.com/
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/manage?offercode=WDXDPXXX06
+DEBUG:root:Already visited: https://www.chase.com/auto/prequalified?offercode=WDXDPXXX11
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/home?offercode=WDXDPXXX05
+DEBUG:root:Already visited: https://www.chase.com/personal/investments
+DEBUG:root:Already visited: https://www.chase.com/personal/investments
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/advisor-services
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/online-investing/self-directed
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/wealth-plan
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/retirement
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/education
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/learning-and-insights
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): secure.chase.com:443
+DEBUG:urllib3.connectionpool:https://secure.chase.com:443 "GET /web/auth/enrollment HTTP/1.1" 200 39567
+DEBUG:root:Crawling: https://secure.chase.com/web/auth/enrollment#/enroll/onlineEnrollment/gettingStarted/index?LOB=COLLogon
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.facebook.com:443
+DEBUG:urllib3.connectionpool:https://www.facebook.com:443 "GET /chase HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.facebook.com/chase
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.instagram.com:443
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /chase/ HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:https://www.instagram.com:443 "GET /accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fchase%2F HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.instagram.com/chase/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): twitter.com:443
+DEBUG:urllib3.connectionpool:https://twitter.com:443 "GET /Chase HTTP/1.1" 400 1001
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.youtube.com:443
+DEBUG:urllib3.connectionpool:https://www.youtube.com:443 "GET /chase HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.youtube.com/chase
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.linkedin.com:443
+DEBUG:urllib3.connectionpool:https://www.linkedin.com:443 "GET /company/chase?trk=company_logo HTTP/1.1" 999 1530
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.pinterest.com:443
+DEBUG:urllib3.connectionpool:https://www.pinterest.com:443 "GET /chase/ HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.pinterest.com/chase/
+DEBUG:root:Already visited: https://personal.chase.com/personal/checking
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): account.chase.com:443
+DEBUG:urllib3.connectionpool:https://account.chase.com:443 "GET /consumer/banking/seo HTTP/1.1" 200 48988
+DEBUG:root:Crawling: https://account.chase.com/consumer/banking/seo
+DEBUG:root:Already visited: https://personal.chase.com/personal/savings
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /rewards-credit-cards HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/rewards-credit-cards
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /cash-back-credit-cards HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/cash-back-credit-cards
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /travel-credit-cards HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/travel-credit-cards
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autofinance.chase.com:443
+DEBUG:urllib3.connectionpool:https://autofinance.chase.com:443 "GET /?offercode=WDXDPXXX02 HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://autofinance.chase.com/?offercode=WDXDPXXX02
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autofinance.chase.com:443
+DEBUG:urllib3.connectionpool:https://autofinance.chase.com:443 "GET /auto-finance/auto-loans?offercode=WDXDPXXX02 HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX02
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): autopreferred.chase.com:443
+DEBUG:urllib3.connectionpool:https://autopreferred.chase.com:443 "GET /garage/auto-loan-calculator?offercode=WDXDPXXX02 HTTP/1.1" 200 7052
+DEBUG:root:Crawling: https://autopreferred.chase.com/garage/auto-loan-calculator?offercode=WDXDPXXX02
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): creditcards.chase.com:443
+DEBUG:urllib3.connectionpool:https://creditcards.chase.com:443 "GET /business-credit-cards HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://creditcards.chase.com/business-credit-cards
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): jpmorganwealthmanagement.chase.com:443
+DEBUG:urllib3.connectionpool:https://jpmorganwealthmanagement.chase.com:443 "GET /advisor HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://jpmorganwealthmanagement.chase.com/advisor
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): account.chase.com:443
+DEBUG:urllib3.connectionpool:https://account.chase.com:443 "GET /consumer/investing/self-directedoffer HTTP/1.1" 301 24768
+DEBUG:urllib3.connectionpool:https://account.chase.com:443 "GET /investing/self-directedoffer HTTP/1.1" 200 46932
+DEBUG:root:Crawling: https://account.chase.com/consumer/investing/self-directedoffer
+DEBUG:root:Already visited: https://locator.chase.com/?locale=en_US
+DEBUG:root:Already visited: https://www.chase.com
+DEBUG:root:Already visited: https://www.chase.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.msg.com:443
+DEBUG:urllib3.connectionpool:https://www.msg.com:443 "GET /madison-square-garden HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.msg.com/madison-square-garden
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.finra.org:443
+DEBUG:urllib3.connectionpool:https://www.finra.org:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://www.finra.org/#/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.sipc.org:443
+DEBUG:urllib3.connectionpool:https://www.sipc.org:443 "GET / HTTP/1.1" 200 9319
+DEBUG:root:Crawling: https://www.sipc.org/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.jpmorgan.com:443
+DEBUG:urllib3.connectionpool:https://www.jpmorgan.com:443 "GET /global HTTP/1.1" 200 28548
+DEBUG:root:Crawling: https://www.jpmorgan.com/global
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.jpmorganchase.com:443
+DEBUG:urllib3.connectionpool:https://www.jpmorganchase.com:443 "GET / HTTP/1.1" 200 16151
+DEBUG:root:Crawling: https://www.jpmorganchase.com
+DEBUG:root:Already visited: https://www.jpmorganchase.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): media.chase.com:443
+DEBUG:urllib3.connectionpool:https://media.chase.com:443 "GET / HTTP/1.1" 200 9073
+DEBUG:root:Crawling: https://media.chase.com
+DEBUG:root:Already visited: https://media.chase.com
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): careers.jpmorgan.com:443
+DEBUG:urllib3.connectionpool:https://careers.jpmorgan.com:443 "GET /US/en/chase HTTP/1.1" 200 8329
+DEBUG:root:Crawling: https://careers.jpmorgan.com/US/en/chase
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): youradchoices.com:443
+DEBUG:urllib3.connectionpool:https://youradchoices.com:443 "GET / HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://youradchoices.com/
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): survey.experience.chase.com:443
+DEBUG:urllib3.connectionpool:https://survey.experience.chase.com:443 "GET /jfe/form/SV_0rBuvmGXX6OhYEJ HTTP/1.1" 200 20698
+DEBUG:root:Crawling: https://survey.experience.chase.com/jfe/form/SV_0rBuvmGXX6OhYEJ
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): survey.experience.chase.com:443
+DEBUG:urllib3.connectionpool:https://survey.experience.chase.com:443 "GET /jfe/form/SV_0kY6b0kOTJsWvUW HTTP/1.1" 200 None
+DEBUG:root:Crawling: https://survey.experience.chase.com/jfe/form/SV_0kY6b0kOTJsWvUW
+DEBUG:root:Already visited: https://www.chase.com
+DEBUG:root:Already visited: https://www.chase.com/digital/resources/search-results.html
+DEBUG:root:Already visited: https://www.chase.com/meeting-scheduler/getstarted
+DEBUG:root:Already visited: https://www.chase.com/business
+DEBUG:root:Already visited: https://www.jpmorgan.com/commercial-banking
+DEBUG:root:Already visited: https://www.chase.com/espanol
+DEBUG:root:Already visited: https://personal.chase.com/personal/checking
+DEBUG:root:Already visited: https://personal.chase.com/personal/first-banking
+DEBUG:root:Already visited: https://personal.chase.com/personal/savings
+DEBUG:root:Already visited: https://creditcards.chase.com/?jp_ltg=chsecate_featured&CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/all-credit-cards?CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/business-credit-cards?jp_ltg=chsecate_smlbiz&CELL=6TKV
+DEBUG:root:Already visited: https://www.chase.com/personal/offers/secureshopping?CELL=6TKV
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-purchase
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-refinance
+DEBUG:root:Already visited: https://secure.chase.com/web/oao/application/retail#/origination;cfgCode=502002;AcctRef=Credit/index/index
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/calculators-resources
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-rates
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/manage-account
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/education
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX09
+DEBUG:root:Already visited: https://autopreferred.chase.com/
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/manage?offercode=WDXDPXXX06
+DEBUG:root:Already visited: https://www.chase.com/auto/prequalified?offercode=WDXDPXXX11
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/home?offercode=WDXDPXXX05
+DEBUG:root:Already visited: https://www.chase.com/personal/investments
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/advisor-services
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/online-investing/self-directed
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/wealth-plan
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/retirement
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/education
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/learning-and-insights
+DEBUG:root:Already visited: https://www.chase.com/digital/customer-service
+DEBUG:root:Already visited: https://www.chase.com/personal/mobile-online-banking/make-payment
+DEBUG:root:Already visited: https://locator.chase.com/?locale=en_US
+DEBUG:root:Already visited: https://www.chase.com/
+DEBUG:root:Already visited: https://secure.chase.com/web/auth/dashboard
+DEBUG:root:Already visited: https://secure.chase.com/web/auth/dashboard
+DEBUG:root:Already visited: https://www.chase.com/digital/resources/search-results.html
+DEBUG:root:Already visited: https://www.chase.com/
+DEBUG:root:Already visited: https://www.chase.com/business
+DEBUG:root:Already visited: https://www.jpmorgan.com/commercial-banking
+DEBUG:root:Already visited: https://www.chase.com/meeting-scheduler/getstarted
+DEBUG:root:Already visited: https://www.chase.com/digital/customer-service
+DEBUG:root:Already visited: https://www.chase.com/digital/customer-service
+DEBUG:root:Already visited: https://www.chase.com/personal/mobile-online-banking/make-payment
+DEBUG:root:Already visited: https://locator.chase.com/?locale=en_US
+DEBUG:root:Already visited: https://www.chase.com/espanol
+DEBUG:root:Already visited: https://www.chase.com/digital/resources/search-results.html
+DEBUG:root:Already visited: https://www.chase.com/
+DEBUG:root:Already visited: https://secure.chase.com/web/auth/dashboard
+DEBUG:root:Already visited: https://account.chase.com/personalbanking
+DEBUG:root:Already visited: https://personal.chase.com/personal/checking
+DEBUG:root:Already visited: https://personal.chase.com/personal/first-banking
+DEBUG:root:Already visited: https://account.chase.com/personalbanking
+DEBUG:root:Already visited: https://personal.chase.com/personal/savings
+DEBUG:root:Already visited: https://creditcards.chase.com/credit-cards/home/?CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/?jp_ltg=chsecate_featured&CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/all-credit-cards?CELL=6TKV
+DEBUG:root:Already visited: https://creditcards.chase.com/business-credit-cards?jp_ltg=chsecate_smlbiz&CELL=6TKV
+DEBUG:root:Already visited: https://www.chase.com/personal/offers/secureshopping?CELL=6TKV
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-purchase
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-refinance
+DEBUG:root:Already visited: https://secure.chase.com/web/oao/application/retail#/origination;cfgCode=502002;AcctRef=Credit/index/index
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/calculators-resources
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/mortgage-rates
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/manage-account
+DEBUG:root:Already visited: https://www.chase.com/personal/mortgage/education
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX12
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX09
+DEBUG:root:Already visited: https://autopreferred.chase.com/
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/manage?offercode=WDXDPXXX06
+DEBUG:root:Already visited: https://www.chase.com/auto/prequalified?offercode=WDXDPXXX11
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/home?offercode=WDXDPXXX05
+DEBUG:root:Already visited: https://www.chase.com/personal/investments
+DEBUG:root:Already visited: https://www.chase.com/personal/investments
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/advisor-services
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/online-investing/self-directed
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/wealth-plan
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/retirement
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/education
+DEBUG:root:Already visited: https://www.chase.com/personal/investments/learning-and-insights
+DEBUG:root:Already visited: https://secure.chase.com/web/auth/enrollment#/enroll/onlineEnrollment/gettingStarted/index?LOB=COLLogon
+DEBUG:root:Already visited: https://www.facebook.com/chase
+DEBUG:root:Already visited: https://www.instagram.com/chase/
+DEBUG:root:Already visited: https://twitter.com/Chase
+DEBUG:root:Already visited: https://www.youtube.com/chase
+DEBUG:root:Already visited: https://www.linkedin.com/company/chase?trk=company_logo
+DEBUG:root:Already visited: https://www.pinterest.com/chase/
+DEBUG:root:Already visited: https://personal.chase.com/personal/checking
+DEBUG:root:Already visited: https://account.chase.com/consumer/banking/seo
+DEBUG:root:Already visited: https://personal.chase.com/personal/savings
+DEBUG:root:Already visited: https://creditcards.chase.com/
+DEBUG:root:Already visited: https://creditcards.chase.com/rewards-credit-cards
+DEBUG:root:Already visited: https://creditcards.chase.com/cash-back-credit-cards
+DEBUG:root:Already visited: https://creditcards.chase.com/travel-credit-cards
+DEBUG:root:Already visited: https://autofinance.chase.com/?offercode=WDXDPXXX02
+DEBUG:root:Already visited: https://autofinance.chase.com/auto-finance/auto-loans?offercode=WDXDPXXX02
+DEBUG:root:Already visited: https://autopreferred.chase.com/garage/auto-loan-calculator?offercode=WDXDPXXX02
+DEBUG:root:Already visited: https://creditcards.chase.com/business-credit-cards
+DEBUG:root:Already visited: https://jpmorganwealthmanagement.chase.com/advisor
+DEBUG:root:Already visited: https://account.chase.com/consumer/investing/self-directedoffer
+DEBUG:root:Already visited: https://locator.chase.com/?locale=en_US
+DEBUG:root:Already visited: https://www.chase.com
+DEBUG:root:Already visited: https://www.chase.com
+DEBUG:root:Already visited: https://www.msg.com/madison-square-garden
+DEBUG:root:Already visited: https://www.finra.org/#/
+DEBUG:root:Already visited: https://www.sipc.org/
+DEBUG:root:Already visited: https://www.jpmorgan.com/global
+DEBUG:root:Already visited: https://www.jpmorganchase.com
+DEBUG:root:Already visited: https://www.jpmorganchase.com
+DEBUG:root:Already visited: https://media.chase.com
+DEBUG:root:Already visited: https://media.chase.com
+DEBUG:root:Already visited: https://careers.jpmorgan.com/US/en/chase
+DEBUG:root:Already visited: https://youradchoices.com/
+DEBUG:root:Already visited: https://survey.experience.chase.com/jfe/form/SV_0rBuvmGXX6OhYEJ
+DEBUG:root:Already visited: https://survey.experience.chase.com/jfe/form/SV_0kY6b0kOTJsWvUW
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): www.vkontakte.ru:80
+DEBUG:urllib3.connectionpool:http://www.vkontakte.ru:80 "GET / HTTP/1.1" 301 164
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.vkontakte.ru:443
+DEBUG:urllib3.connectionpool:https://www.vkontakte.ru:443 "GET / HTTP/1.1" 301 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): vk.com:443
+DEBUG:urllib3.connectionpool:https://vk.com:443 "GET / HTTP/1.1" 302 20
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): m.vk.com:443
+DEBUG:urllib3.connectionpool:https://m.vk.com:443 "GET / HTTP/1.1" 200 45508
+DEBUG:root:Crawling: http://www.vkontakte.ru
